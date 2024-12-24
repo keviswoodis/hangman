@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Word Nerd</h1></header>
+    <hr>
+    <main id = "game">
+        <div id = "word"></div>
+        <h1>Guess a letter.</h1>
+        <div id = "guessarea">
+            
+                <input type = "text" maxlength = 1 id = "guess">
+                <button onclick = 'checkLetter()'>Check</button>
+        
+        </div>
+        <hr>
+        <div id = "deadletters">
+            <h3>Guessed Letters: </h3>
+            <div id = "guessed"></div>
+        </div>
+
+    </main>
+    <script src = "main.js"></script>
+</body>
+</html>
