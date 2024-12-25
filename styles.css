@@ -35,3 +35,35 @@ body {
     margin-right: 5px;
     font-size: 25px;
 }
+
+#deadletters {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-gap: 5px;
+    width:80%;
+}
+
+#deadletters h2 {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:whitesmoke;
+    color: black;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px; 
+    margin-top: 5px;
+    text-align: center;
+    align-content: center;
+}
+
+#playagain {
+    display: none;
+    width: 150px;
+    text-align: center;
+    align-content: center;
+    color: black;
+    background-color: white;
+    border: black 1px solid;
+    border-radius: 5px;
+    
+}
