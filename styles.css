@@ -22,6 +22,7 @@ body {
     align-content: center;
     background-color: whitesmoke;
     color: black;
+    animation: popIn 60ms;
 }
 
 #guess {
@@ -45,9 +46,9 @@ body {
 }
 
 #deadletters h2 {
-    border: 1px solid black;
+    border: 1px solid lightgray;;
     border-radius: 5px;
-    background-color:whitesmoke;
+    background: linear-gradient(white, lightgray);
     color: black;
     width: 40px;
     height: 40px;
@@ -68,6 +69,31 @@ body {
     border-radius: 5px;
     
 }
+
+@keyframes popIn {
+    0%{
+        opacity: 0;
+        transform: scale(0.3)
+            translate3d(0, 0, 0);
+    }
+
+    50% {
+        opacity: .9;
+        transform: scale(1.5);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(.89);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+            translate3d(0,0,0);
+    }
+}
+
 @media screen and (min-width: 600px){
     body{
         margin: auto 10%;

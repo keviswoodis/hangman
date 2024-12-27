@@ -16,12 +16,18 @@ let theWord = words[wordNum];
 console.log(words[0]);
 console.log(theWord);
 
+async function createSlotsWithDelay(){
 for(let i = 0; i < theWord.length; i++){
     let slot = document.createElement("h2");
     slot.id = `letter${i}`;
     word.appendChild(slot);
+    
+    await new Promise(resolve => setTimeout(resolve, 60));
+    }
 }
 
+
+createSlotsWithDelay();
 let guessed_letters = [];
 let incorrect = 0;
 
