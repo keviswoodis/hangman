@@ -58,32 +58,32 @@ let letterx = document.getElementById("letterkeyx");
 let lettery = document.getElementById("letterkeyy");
 let letterz = document.getElementById("letterkeyz");
 
-lettera.addEventListener("click", function (){checkLetter("A"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterb.addEventListener("click", function (){checkLetter("B"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterc.addEventListener("click", function (){checkLetter("C"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterd.addEventListener("click", function (){checkLetter("D"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-lettere.addEventListener("click", function (){checkLetter("E"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterf.addEventListener("click", function (){checkLetter("F"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterg.addEventListener("click", function (){checkLetter("G"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterh.addEventListener("click", function (){checkLetter("H"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letteri.addEventListener("click", function (){checkLetter("I"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterj.addEventListener("click", function (){checkLetter("J"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterk.addEventListener("click", function (){checkLetter("K"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterl.addEventListener("click", function (){checkLetter("L"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterm.addEventListener("click", function (){checkLetter("M"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-lettern.addEventListener("click", function (){checkLetter("N"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-lettero.addEventListener("click", function (){checkLetter("O"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterp.addEventListener("click", function (){checkLetter("P"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterq.addEventListener("click", function (){checkLetter("Q"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterr.addEventListener("click", function (){checkLetter("R"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letters.addEventListener("click", function (){checkLetter("S"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-lettert.addEventListener("click", function (){checkLetter("T"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letteru.addEventListener("click", function (){checkLetter("U"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterv.addEventListener("click", function (){checkLetter("V"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterw.addEventListener("click", function (){checkLetter("W"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterx.addEventListener("click", function (){checkLetter("X"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-lettery.addEventListener("click", function (){checkLetter("Y"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
-letterz.addEventListener("click", function (){checkLetter("Z"); this.style.backgroundColor = "green"; this.style.pointerEvents = "none";});
+lettera.addEventListener("click", function (){checkLetter("A"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterb.addEventListener("click", function (){checkLetter("B"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+letterc.addEventListener("click", function (){checkLetter("C"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+letterd.addEventListener("click", function (){checkLetter("D"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+lettere.addEventListener("click", function (){checkLetter("E"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+letterf.addEventListener("click", function (){checkLetter("F"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+letterg.addEventListener("click", function (){checkLetter("G"); this.style.color   = "green"; this.style.pointerEvents = "none";});
+letterh.addEventListener("click", function (){checkLetter("H"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letteri.addEventListener("click", function (){checkLetter("I"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterj.addEventListener("click", function (){checkLetter("J"); this.style.color   = "green"; this.style.pointerEvents = "none";});
+letterk.addEventListener("click", function (){checkLetter("K"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+letterl.addEventListener("click", function (){checkLetter("L"); this.style.color   = "green"; this.style.pointerEvents = "none";});
+letterm.addEventListener("click", function (){checkLetter("M"); this.style.color = "green"; this.style.pointerEvents = "none";});
+lettern.addEventListener("click", function (){checkLetter("N"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+lettero.addEventListener("click", function (){checkLetter("O"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterp.addEventListener("click", function (){checkLetter("P"); this.style.color  = "green"; this.style.pointerEvents = "none";});
+letterq.addEventListener("click", function (){checkLetter("Q"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterr.addEventListener("click", function (){checkLetter("R"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letters.addEventListener("click", function (){checkLetter("S"); this.style.color = "green"; this.style.pointerEvents = "none";});
+lettert.addEventListener("click", function (){checkLetter("T"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letteru.addEventListener("click", function (){checkLetter("U"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterv.addEventListener("click", function (){checkLetter("V"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterw.addEventListener("click", function (){checkLetter("W"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterx.addEventListener("click", function (){checkLetter("X"); this.style.color = "green"; this.style.pointerEvents = "none";});
+lettery.addEventListener("click", function (){checkLetter("Y"); this.style.color = "green"; this.style.pointerEvents = "none";});
+letterz.addEventListener("click", function (){checkLetter("Z"); this.style.color = "green"; this.style.pointerEvents = "none";});
 
 let correctLetters = "";
 
@@ -112,7 +112,7 @@ function checkLetter(letter){
 
         if(correctLetters.length == theWord.length) {
             let playfield = document.getElementById("body");
-            playfield.style.backgroundColor = "green";
+            playfield.style.color = "green";
             playfield.style.color = "white";
             let message = document.getElementById("top-message");
             message.innerHTML = "You Win!";
