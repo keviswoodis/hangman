@@ -5,32 +5,62 @@ let words = ["SANTA", "TREE", "CANDY", "STOCKING", "ORNAMENT", "LIGHTS", "PRESEN
 
 let word = document.getElementById("word");
 
+
+/*create an array of ten numbers, so that we can avoid using words that have
+been used in the last ten games, to remedy repetition issues. pulls existing
+liste of indexes from session storage first, if none, then creates one full of -1s. */
+let indexes = JSON.parse(sessionStorage.getItem("indexes")) || [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+
+/* This function gets our words index. */
 function getIndex(max){
-    let number = Math.floor(Math.random() * max);
-    return number;
+    let number;
+    do {
+        //choose random number within our range.
+        number = Math.floor(Math.random() * max);
+
+        //if the index includes the number, try again. 
+    }while (indexes.includes(number));
+        return number;
+    
 };
 
-let wordNum = getIndex(10); 
+//once an index that hasnt been used in ten rounds has been found,
+//assign the word at that index as the word for the puzzle.
+let wordNum = getIndex(words.length);
 
+//remove the oldest number from the index list, and add the new number.
+indexes.shift();
+indexes.push(wordNum); 
+
+
+//save the index to session storage, so that when the page reloads, we can
+//still keep track of what words have been used. 
+sessionStorage.setItem("indexes", JSON.stringify(indexes));
 let theWord = words[wordNum];
+console.log(indexes);
 console.log(words[0]);
 console.log(theWord);
 
+/*this async function summons our puzzle to the screen on letter at time for 
+effect*/
+
 async function createSlotsWithDelay(){
-for(let i = 0; i < theWord.length; i++){
-    let slot = document.createElement("h2");
-    slot.id = `letter${i}`;
-    word.appendChild(slot);
+    for(let i = 0; i < theWord.length; i++){
+        let slot = document.createElement("h2");
+        slot.id = `letter${i}`;
+        word.appendChild(slot);
     
-    await new Promise(resolve => setTimeout(resolve, 60));
+        await new Promise(resolve => setTimeout(resolve, 60));
     }
 }
-
+//call the function to put the puzzle on the screen. 
 
 createSlotsWithDelay();
-let guessed_letters = [];
+
+//store the number of incorrect guesses
 let incorrect = 0;
 
+//create variables for our letter keys, and then add event listeners to them. 
 let lettera = document.getElementById("letterkeya");
 let letterb = document.getElementById("letterkeyb");
 let letterc = document.getElementById("letterkeyc");
@@ -88,6 +118,9 @@ letterz.addEventListener("click", function (){checkLetter("Z"); this.style.color
 let correctLetters = "";
 
 document.getElementById("playagain").addEventListener("click", function  () {window.location.href="index.html";});
+/* function listens to the letter we clicked an checks if it is part of the puzzle. If it is,
+   it is added to the correct letters array, and displayed on the puzzle each time it occurs. If it's not
+   the number of incorrect guesses increases */
 
 function checkLetter(letter){
     let guess = letter;
@@ -109,7 +142,8 @@ function checkLetter(letter){
                 correctLetters = correctLetters + guess;
             }
         }
-
+        // after the letter is guessed, if the word is complete, display winner screen and
+        // play again button.
         if(correctLetters.length == theWord.length) {
             let playfield = document.getElementById("body");
             playfield.style.backgroundColor = "green";
@@ -120,7 +154,8 @@ function checkLetter(letter){
             playagain.style.display = "block";
         }
 
-    //if no: 
+    //if no, increase the number of incorrect guesses, and if it's more than 5, display the loser screen and 
+    //play again button. 
     }else{
         console.log("no");
         incorrect++;
