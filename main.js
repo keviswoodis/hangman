@@ -112,7 +112,7 @@ function checkLetter(letter){
 
         if(correctLetters.length == theWord.length) {
             let playfield = document.getElementById("body");
-            playfield.style.color = "green";
+            playfield.style.backgroundColor = "green";
             playfield.style.color = "white";
             let message = document.getElementById("top-message");
             message.innerHTML = "You Win!";
